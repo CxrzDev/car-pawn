@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ขอบคุณที่ติดต่อ | ดาวรุ่งจอดจำนำรถ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1d3557;
+            --accent-color: #06c755;
+            --fb-color: #1877F2;
+            --text-dark: #333;
+            --light-bg: #f8f9fa;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .thank-you-card {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            padding: 50px 40px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid #eee;
+        }
+
+        .icon-success {
+            width: 80px;
+            height: 80px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 0 auto 30px;
+            box-shadow: 0 10px 20px rgba(230, 57, 70, 0.3);
+            animation: scaleIn 0.5s ease-out;
+        }
+
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .social-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            gap: 10px;
+        }
+
+        .btn-line {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-facebook {
+            background-color: var(--fb-color);
+            color: white;
+        }
+
+        .btn-back {
+            background-color: transparent;
+            color: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-line:hover {
+            background-color: #05b14c;
+        }
+
+        .btn-facebook:hover {
+            background-color: #166fe5;
+        }
+
+        .btn-back:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .social-label {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .icon-svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        @media (max-width: 576px) {
+            .thank-you-card {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="thank-you-card">
+        <div class="icon-success">✓</div>
+        <h1>ขอบคุณที่ไว้วางใจเรา</h1>
+        <p>เจ้าหน้าที่จะติดต่อกลับหาท่านโดยเร็วที่สุด หรือสามารถติดตามข่าวสารและโปรโมชั่นได้ที่ช่องทางด้านล่าง</p>
+
+        <span class="social-label">ติดตามหรือแอดเพื่อรับข้อมูลเพิ่มเติม</span>
+
+        <div class="social-group">
+            <a href="https://line.me/ti/p/7rTPABLJ9s" class="btn btn-line">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path
+                        d="M24 10.304c0-4.369-4.805-7.925-10.713-7.925-5.908 0-10.713 3.556-10.713 7.925 0 3.916 3.812 7.206 8.973 7.828.35.075.823.23 1.055.524.243.308.158.783.103 1.093l-.226 1.346c-.068.408-.333 1.594 1.439.87s9.636-5.674 9.636-9.661zm-15.082 3.99h-2.152c-.314 0-.57-.255-.57-.57v-4.102c0-.315.256-.57.57-.57h2.152c.314 0 .57.255.57.57 0 .315-.256.57-.57.57h-1.582v1.173h1.582c.314 0 .57.255.57.57 0 .315-.256.57-.57.57h-1.582v1.201h1.582c.314 0 .57.255.57.57 0 .315-.256.57-.57.57zm3.922 0h-2.152c-.314 0-.57-.255-.57-.57v-4.102c0-.315.256-.57.57-.57.315 0 .57.255.57.57v3.532h1.582c.314 0 .57.255.57.57 0 .315-.256.57-.57.57zm2.744-1.29l1.102-1.895h-1.102c-.314 0-.57-.255-.57-.57 0-.315.256-.57.57-.57h2.152c.314 0 .57.255.57.57 0 .151-.06.297-.168.403l-1.31 2.253h1.478c.314 0 .57.255.57.57 0 .315-.256.57-.57.57h-2.152c-.314 0-.57-.255-.57-.57 0-.151.059-.297.168-.403zm5.552-.962h-1.582v-1.173h1.582c.314 0 .57.255.57.57 0 .315-.256.57-.57.57h-2.153c-.314 0-.57-.255-.57-.57v-4.102c0-.315.256-.57.57-.57h2.153c.314 0 .57.255.57.57 0 .315-.256.57-.57.57h-1.582v1.201h1.582c.314 0 .57.255.57.57 0 .315-.256.57-.57.57z" />
+                </svg>
+                เพิ่มเพื่อนใน LINE
+            </a>
+            <a href="https://www.facebook.com/share/17t2thZpSu/?mibextid=wwXIfr" target="_blank"
+                class="btn btn-facebook">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path
+                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.308c0-3.007 1.791-4.668 4.533-4.668 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.215h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+                ติดตามทาง Facebook
+            </a>
+        </div>
+
+        <a href="index.html" class="btn btn-back">กลับหน้าหลัก</a>
+    </div>
+
+    <script>
+        // เมื่อโหลดหน้า ให้ตรวจสอบว่ามีลิงก์ที่ค้างอยู่หรือไม่
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const pendingContact = sessionStorage.getItem('pendingContact');
+            if (pendingContact) {
+                // ลบออกจาก storage เพื่อไม่ให้เปิดซ้ำเมื่อ Refresh หน้า
+                sessionStorage.removeItem('pendingContact');
+
+                // รอ 1 วินาทีเพื่อให้คนได้เห็นหน้าขอบคุณก่อน แล้วค่อยเด้งไปแอป/เว็บติดต่อ
+                setTimeout(() => {
+                    // ถ้าเป็นเบอร์โทร ให้ใช้การเปลี่ยน location ปกติ
+                    if (pendingContact.startsWith('tel:')) {
+                        window.location.href = pendingContact;
+                    } else {
+                        // ถ้าเป็น Line หรือ Facebook ให้เปิดใน Tab ใหม่
+                        window.open(pendingContact, '_blank');
+                    }
+                }, 1000);
+            }
+        });
+    </script>
+</body>
+
+</html>

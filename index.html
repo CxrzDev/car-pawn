@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #e63946; /* สีแดงหลัก */
-            --secondary-color: #1d3557; /* สีน้ำเงินเข้ม */
-            --accent-color: #06c755; 
+            --primary-color: #e63946;
+            /* สีแดงหลัก */
+            --secondary-color: #1d3557;
+            --accent-color: #06c755;
             --red-process: #FF0000;
             --text-dark: #333;
             --light-bg: #f8f9fa;
@@ -26,7 +28,6 @@
             line-height: 1.6;
             color: var(--text-dark);
             background-color: #fff;
-            -webkit-font-smoothing: antialiased; /* ปรับ font ให้คมชัดบน iOS */
         }
 
         /* Helper Classes */
@@ -38,18 +39,21 @@
 
         .section-padding {
             padding: 80px 0;
+            /* เพิ่มระยะห่างให้ดูสบายตาขึ้น */
         }
 
-        .text-center { text-align: center; }
-        
+        .text-center {
+            text-align: center;
+        }
+
         .text-highlight-red {
             color: var(--primary-color);
         }
 
         /* --- HERO SECTION --- */
         .hero {
-            background: linear-gradient(135deg, rgba(220, 20, 60, 0.92), rgba(160, 0, 0, 0.95)), 
-                        url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(135deg, rgba(220, 20, 60, 0.92), rgba(160, 0, 0, 0.95)),
+                url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
             color: white;
@@ -64,7 +68,7 @@
             margin-bottom: 15px;
             line-height: 1.2;
             font-weight: 800;
-            text-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .hero p {
@@ -87,7 +91,7 @@
             padding: 30px 50px;
             border-radius: 20px;
             backdrop-filter: blur(5px);
-            border: 1px solid rgba(255,255,255,0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .feature-item {
@@ -110,7 +114,7 @@
             justify-content: center;
             font-weight: 900;
             font-size: 1.2rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
             flex-shrink: 0;
         }
 
@@ -126,19 +130,35 @@
         .btn-line {
             background-color: var(--accent-color);
             color: white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .btn-call {
             background-color: white;
             color: #d00000;
             font-weight: 800;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .cta-group .btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn-contact-main {
+            background-color: white;
+            color: var(--primary-color);
+            padding: 18px 60px !important;
+            font-size: 1.5rem !important;
+            font-weight: 800;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border: 2px solid transparent;
+        }
+
+        .btn-contact-main:hover {
+            background-color: var(--primary-color) !important;
+            color: white !important;
+            border-color: white;
         }
 
         .btn {
@@ -154,13 +174,14 @@
             font-size: 1.1rem;
         }
 
-        /* --- FEATURES SECTION --- */
+        /* --- UPDATED: FEATURES SECTION (REDESIGNED) --- */
         .features-section-bg {
             background-color: white;
             position: relative;
             overflow: hidden;
         }
 
+        /* ตกแต่งพื้นหลังเล็กน้อย */
         .features-section-bg::before {
             content: '';
             position: absolute;
@@ -168,7 +189,7 @@
             right: -10%;
             width: 40%;
             height: 60%;
-            background: radial-gradient(circle, rgba(230,57,70,0.05) 0%, rgba(255,255,255,0) 70%);
+            background: radial-gradient(circle, rgba(230, 57, 70, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
             z-index: 0;
             pointer-events: none;
         }
@@ -176,6 +197,7 @@
         .features-grid-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
+            /* แบ่งครึ่งซ้ายขวา */
             gap: 60px;
             align-items: center;
             position: relative;
@@ -213,10 +235,12 @@
             color: var(--text-dark);
         }
 
+        /* ไอคอนติ๊กถูกสีแดงสำหรับส่วนนี้ */
         .benefit-icon-red {
             width: 32px;
             height: 32px;
             background-color: rgba(230, 57, 70, 0.1);
+            /* พื้นหลังแดงจางๆ */
             color: var(--primary-color);
             border-radius: 50%;
             display: flex;
@@ -227,16 +251,22 @@
             flex-shrink: 0;
         }
 
+        /* พื้นที่โชว์รูปรถ */
         .features-image-showcase {
             position: relative;
             width: 100%;
             height: 500px;
+            /* กำหนดความสูงให้ดูใหญ่ */
             border-radius: 30px;
+            /* ขอบมนมาก */
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            /* เงาพรีเมียม */
             transform: perspective(1000px) rotateY(-5deg);
+            /* เอียงเล็กน้อยให้ดูมีมิติ */
             transition: transform 0.3s ease;
             border: 3px solid white;
+            /* ขอบขาวตัด */
         }
 
         .features-image-showcase:hover {
@@ -247,8 +277,12 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
+            /* ให้รูปเต็มพื้นที่โดยไม่เสียสัดส่วน */
             object-position: center;
         }
+
+        /* --- END UPDATED FEATURES SECTION --- */
+
 
         /* --- PAWN PROCESS STYLES --- */
         .process-title-red {
@@ -271,7 +305,7 @@
         .process-timeline::before {
             content: '';
             position: absolute;
-            top: 88px; 
+            top: 88px;
             left: 50px;
             right: 50px;
             height: 4px;
@@ -362,22 +396,19 @@
         .interest-section-bg {
             background-color: #f8f9fa;
         }
-        
+
         .table-container {
             background: white;
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 5px 20px rgba(220, 20, 60, 0.1);
             border: 1px solid #ffecec;
-            /* เพิ่ม Scroll สำหรับตารางในมือถือ */
-            overflow-x: auto; 
         }
 
         .modern-table {
             width: 100%;
             border-collapse: collapse;
             margin: 0;
-            min-width: 500px; /* บังคับความกว้างขั้นต่ำให้ตารางไม่บีบเกินไปในมือถือ */
         }
 
         .modern-table th {
@@ -401,126 +432,29 @@
             border-bottom: none;
         }
 
-        .modern-table tbody tr:nth-child(even) { background-color: #fff; }
-        .modern-table tbody tr:hover { background-color: #fff5f5; }
+        .modern-table tbody tr:nth-child(even) {
+            background-color: #fff;
+        }
 
-        .modern-table tr.total-row { background-color: #ffebeb !important; }
+        .modern-table tbody tr:hover {
+            background-color: #fff5f5;
+        }
+
+        .modern-table tr.total-row {
+            background-color: #ffebeb !important;
+        }
+
         .modern-table tr.total-row td {
             color: var(--primary-color);
             font-weight: 700;
             font-size: 1.3rem;
             border-top: 2px solid #ffcccc;
         }
-        
+
         .modern-table th:nth-child(2),
         .modern-table td:nth-child(2) {
             text-align: right;
             padding-right: 30px;
-        }
-
-        /* --- ACCEPTED VEHICLES SECTION STYLES --- */
-        .accepted-vehicles-bg {
-            background-color: var(--light-bg);
-        }
-        .section-title-red {
-            color: var(--primary-color);
-            font-weight: 800;
-            margin-bottom: 10px;
-        }
-        .section-subtitle {
-            color: #666;
-            margin-bottom: 40px;
-            font-size: 1.1rem;
-        }
-
-        .vehicle-grid-container {
-            display: grid;
-            /* ใช้ minmax 280px เพื่อรองรับมือถือจอเล็ก */
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
-        }
-
-        .vehicle-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-            border-top: 4px solid var(--primary-color);
-        }
-        .vehicle-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .vehicle-img-wrapper {
-            height: 240px;
-            background-color: #ddd;
-            position: relative;
-        }
-        .vehicle-img-wrapper img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .vehicle-card-content {
-            padding: 25px;
-        }
-        .vehicle-card h3 {
-            color: var(--secondary-color);
-            font-weight: 700;
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .vehicle-list {
-            list-style: none;
-            padding: 0;
-        }
-        .vehicle-list li {
-            margin-bottom: 12px;
-            color: #555;
-            position: relative;
-            padding-left: 30px;
-            font-size: 1.05rem;
-        }
-        .vehicle-list li::before {
-            content: '✓';
-            color: var(--primary-color);
-            font-weight: 900;
-            position: absolute;
-            left: 0;
-            font-size: 1.2rem;
-        }
-
-        /* Conditions Banner */
-        .conditions-banner {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 30px;
-            border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(29, 53, 87, 0.2);
-        }
-        .conditions-banner h3 {
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-        .conditions-tags {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-        .condition-tag {
-            background: rgba(255,255,255,0.1);
-            padding: 10px 25px;
-            border-radius: 50px;
-            font-weight: 500;
-            border: 1px solid rgba(255,255,255,0.2);
         }
 
         /* --- DOCUMENT SECTION STYLES --- */
@@ -531,7 +465,7 @@
             padding: 30px;
             margin-bottom: 25px;
             color: white;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
 
         .doc-header-row {
@@ -583,7 +517,7 @@
 
         /* --- CONTACT SECTION STYLES --- */
         .contact-red-section {
-            background: linear-gradient(135deg, #a00000, #dc143c); 
+            background: linear-gradient(135deg, #a00000, #dc143c);
             color: white;
             padding: 80px 0;
             position: relative;
@@ -596,14 +530,14 @@
             padding: 40px;
             max-width: 700px;
             margin: 0 auto 40px;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .contact-title {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 40px;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
         }
 
         .contact-detail-row {
@@ -614,7 +548,7 @@
             font-size: 1.15rem;
             font-weight: 300;
         }
-        
+
         .contact-icon {
             width: 30px;
             height: 30px;
@@ -626,9 +560,9 @@
             margin-right: 15px;
             color: #d00000;
             flex-shrink: 0;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
-        
+
         .contact-icon svg {
             width: 16px;
             height: 16px;
@@ -654,7 +588,7 @@
             border-radius: 20px;
             font-weight: bold;
             margin-right: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             position: relative;
             pointer-events: auto;
             font-size: 0.9rem;
@@ -690,6 +624,14 @@
             transform: scale(1.1);
         }
 
+        .btn-facebook {
+            background-color: #1877F2;
+        }
+
+        .btn-facebook:hover {
+            background-color: #0a66c2;
+        }
+
         .chat-icon-svg {
             width: 32px;
             height: 32px;
@@ -704,56 +646,69 @@
             border-top: 1px solid #222;
         }
 
-        /* -------------------------------------------
-           RESPONSIVE MEDIA QUERIES (UPDATED ALL)
-        ------------------------------------------- */
-        
-        /* Tablets & Smaller Desktops */
+        /* Responsive */
         @media (max-width: 992px) {
-            .container { max-width: 720px; }
-            .hero h1 { font-size: 2.6rem; }
-            
-            /* Features: เปลี่ยนเป็น Column เดียว */
+            .container {
+                max-width: 720px;
+            }
+
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            /* ปรับ Grid เป็นคอลัมน์เดียวบน Tablet */
             .features-grid-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
             }
+
             .features-image-showcase {
                 height: 400px;
-                transform: none; /* ยกเลิกเอียง */
+                transform: none;
+                /* ยกเลิกการเอียงบนจอเล็ก */
             }
-            .features-image-showcase:hover { transform: none; }
+
+            .features-image-showcase:hover {
+                transform: none;
+            }
         }
 
-        /* Mobile Devices (Landscape phones, Tablets) */
         @media (max-width: 768px) {
             .container {
                 max-width: 540px;
-                padding: 0 20px;
+                padding: 0 15px;
             }
-            .section-padding { padding: 50px 0; } /* ลดระยะห่าง */
-            
-            .hero h1 { font-size: 2.2rem; }
-            .hero-features-list { width: 100%; padding: 25px; }
-            .feature-item { font-size: 1.1rem; }
-            
-            .btn { width: 100%; margin: 8px 0; }
-            
-            .features-image-showcase { height: 300px; }
-            .features-content-side h2 { font-size: 2rem; }
 
-            /* Process Timeline Vertical */
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .btn {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            /* Features Mobile */
+            .features-image-showcase {
+                height: 300px;
+            }
+
+            .features-content-side h2 {
+                font-size: 2rem;
+            }
+
+            /* Process Timeline Mobile */
             .process-timeline {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 20px;
                 padding-left: 10px;
             }
-            
+
             .process-timeline::before {
-                top: 25px;
-                bottom: 25px;
-                left: 32px; /* จัดกึ่งกลางวงกลม */
+                top: 20px;
+                bottom: 20px;
+                left: 31px;
                 width: 4px;
                 height: auto;
                 right: auto;
@@ -764,60 +719,94 @@
                 width: 100%;
                 text-align: left;
                 align-items: flex-start;
-                gap: 20px;
+                gap: 15px;
             }
 
-            .step-icon-img { display: none; } /* ซ่อนไอคอนรถ/เอกสาร */
-            .step-num { margin-top: 0; flex-shrink: 0; margin-bottom: 0; }
-            .step-text { padding-top: 8px; }
-            .step-text h3 { text-align: left; margin-bottom: 2px; }
-            .step-text p { max-width: 100%; margin: 0; text-align: left; }
+            .step-icon-img {
+                display: none;
+            }
+
+            .step-num {
+                margin-top: 0;
+                flex-shrink: 0;
+            }
+
+            .step-text {
+                padding-top: 5px;
+            }
+
+            .step-text p {
+                max-width: 100%;
+                margin: 0;
+            }
 
             .btn-contact-red {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 padding: 15px;
                 border-radius: 50px;
             }
 
-            /* Document */
-            .doc-black-card { padding: 20px; }
-            .doc-title-text { font-size: 1.2rem; }
-            
-            /* Contact */
+            /* Document Section Mobile */
+            .doc-black-card {
+                padding: 20px;
+            }
+
+            .doc-title-text {
+                font-size: 1.2rem;
+            }
+
+            /* Hero Mobile */
+            .hero-features-list {
+                padding: 20px;
+                width: 100%;
+                align-items: flex-start;
+            }
+
+            .feature-item {
+                font-size: 1.1rem;
+            }
+
+            /* Contact Mobile */
             .contact-detail-row {
                 flex-direction: column;
                 text-align: center;
                 gap: 10px;
             }
-            .contact-icon { margin-right: 0; margin-bottom: 5px; }
 
-            /* Accepted Vehicles */
-            .vehicle-img-wrapper { height: 200px; }
+            .contact-icon {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
         }
 
-        /* Small Mobile Devices */
         @media (max-width: 576px) {
-            .container { max-width: 100%; padding: 0 15px; }
-            
-            .hero { padding: 80px 0; }
-            .hero h1 { font-size: 1.8rem; }
-            .hero p { font-size: 1rem; }
-            
-            .process-title-red { font-size: 2rem; }
-            .contact-title { font-size: 2rem; }
-            
-            .conditions-banner h3 { font-size: 1.3rem; }
-            .condition-tag { font-size: 0.9rem; padding: 8px 15px; width: 100%; }
+            .container {
+                max-width: 100%;
+                padding: 0 10px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .process-title-red {
+                font-size: 2rem;
+            }
+
+            .contact-title {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header class="hero">
         <div class="container">
             <h1>จำนำรถยนต์กับ "ดาวรุ่ง" <br>อนุมัติไว รับเงินสดทันใจ 100%</h1>
             <p>เปลี่ยนรถเป็นทุนได้ง่ายๆ สัญญาโปร่งใส ไม่มีค่าธรรมเนียมแอบแฝง ดูแลรถท่านอย่างดีในที่จอดมาตรฐาน</p>
-            
+
             <div class="hero-features-list">
                 <div class="feature-item">
                     <div class="check-icon">✓</div> <span>ไม่ต้องมีเล่ม</span>
@@ -837,8 +826,7 @@
             </div>
 
             <div class="cta-group">
-                <a href="https://line.me/ti/p/7rTPABLJ9s" class="btn btn-line">🟢 แอดไลน์ปรึกษาฟรี</a>
-                <a href="tel:0933052209" class="btn btn-call">📞 โทรเลย: 093-305-2209</a>
+                <a href="thank-you.html" class="btn btn-contact-main"> ช่องทางการติดต่อ</a>
             </div>
         </div>
     </header>
@@ -846,10 +834,13 @@
     <section class="features-section-bg section-padding">
         <div class="container">
             <div class="features-grid-container">
+
                 <div class="features-content-side">
                     <h2>ทำไมต้องเลือก <span class="text-highlight-red">"ดาวรุ่งจอดจำนำรถ"</span></h2>
-                    <p class="features-intro-text">เราเข้าใจว่ารถคือทรัพย์สินที่มีค่าของคุณ เราจึงให้ความสำคัญสูงสุดกับการดูแลรักษาความปลอดภัย เพื่อให้คุณมั่นใจได้ว่ารถของคุณจะอยู่ในสภาพเดิม 100% เมื่อถึงวันไถ่ถอน</p>
-                    
+                    <p class="features-intro-text">เราเข้าใจว่ารถคือทรัพย์สินที่มีค่าของคุณ
+                        เราจึงให้ความสำคัญสูงสุดกับการดูแลรักษาความปลอดภัย
+                        เพื่อให้คุณมั่นใจได้ว่ารถของคุณจะอยู่ในสภาพเดิม 100% เมื่อถึงวันไถ่ถอน</p>
+
                     <ul class="benefits-list-styled">
                         <li class="benefit-item">
                             <div class="benefit-icon-red">✓</div>
@@ -869,20 +860,25 @@
                         </li>
                     </ul>
                 </div>
+
                 <div class="features-image-showcase">
                     <img src="car_parking_facility.jpg" alt="ที่จอดรถปลอดภัย ดาวรุ่งจอดจำนำรถ">
                 </div>
+
             </div>
         </div>
     </section>
-
     <section class="section-padding" style="background-color: white;">
         <div class="container">
             <h2 class="process-title-red">ขั้นตอนการจำนำ</h2>
+
             <div class="process-timeline">
+
                 <div class="process-step-item">
                     <svg class="step-icon-img" viewBox="0 0 24 24">
-                        <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                        <path
+                            d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2">
+                        </path>
                         <circle cx="7" cy="17" r="2"></circle>
                         <circle cx="17" cy="17" r="2"></circle>
                     </svg>
@@ -892,6 +888,7 @@
                         <p>ข้อมูลและรูปรถ<br>ทางไลน์หรือโทร</p>
                     </div>
                 </div>
+
                 <div class="process-step-item">
                     <svg class="step-icon-img" viewBox="0 0 24 24">
                         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -906,6 +903,7 @@
                         <p>เจ้าหน้าที่ประเมินวงเงิน<br>และเอกสาร</p>
                     </div>
                 </div>
+
                 <div class="process-step-item">
                     <svg class="step-icon-img" viewBox="0 0 24 24">
                         <path d="M9 11l3 3L22 4"></path>
@@ -917,6 +915,7 @@
                         <p>เจ้าหน้าที่ตรวจเช็ค<br>สภาพรถยนต์</p>
                     </div>
                 </div>
+
                 <div class="process-step-item">
                     <svg class="step-icon-img" viewBox="0 0 24 24">
                         <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
@@ -929,6 +928,7 @@
                         <p>ดำเนินการทำสัญญา<br>ถูกต้องตามกฎหมาย</p>
                     </div>
                 </div>
+
                 <div class="process-step-item">
                     <svg class="step-icon-img" viewBox="0 0 24 24">
                         <rect x="2" y="6" width="20" height="12" rx="2"></rect>
@@ -941,7 +941,9 @@
                         <p>รับเงินสดทันที</p>
                     </div>
                 </div>
+
             </div>
+
             <a href="tel:0933052209" class="btn-contact-red">
                 สอบถามผ่านทางโทรศัพท์
             </a>
@@ -951,8 +953,10 @@
     <section class="section-padding interest-section-bg">
         <div class="container">
             <h2 class="text-center" style="margin-bottom: 10px;">อัตราดอกเบี้ยและตัวอย่างการคำนวณ</h2>
-            <p class="text-center" style="color: #666; margin-bottom: 40px;">ดอกเบี้ยเริ่มต้นเพียง <span style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">1.25%</span> ต่อเดือน (ตามที่กฎหมายกำหนด)</p>
-            
+            <p class="text-center" style="color: #666; margin-bottom: 40px;">ดอกเบี้ยเริ่มต้นเพียง <span
+                    style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">1.25%</span> ต่อเดือน
+                (ตามที่กฎหมายกำหนด)</p>
+
             <div class="table-container">
                 <table class="modern-table">
                     <thead>
@@ -981,64 +985,31 @@
                     </tbody>
                 </table>
             </div>
-            
+
             <p style="margin-top: 20px; font-size: 0.9rem; text-align: center; color: #888;">
                 *หมายเหตุ: อัตราดอกเบี้ยอาจเปลี่ยนแปลงตามปีรถและสภาพรถจริง
             </p>
         </div>
     </section>
 
-    <section class="section-padding accepted-vehicles-bg">
-        <div class="container">
-            <h2 class="text-center section-title-red">เรายินดีรับรถประเภทใดบ้าง?</h2>
-            <p class="text-center section-subtitle">เปิดกว้างทุกความต้องการ เปลี่ยนรถเป็นเงินสดได้ง่ายๆ</p>
-
-            <div class="vehicle-grid-container">
-                
-                <div class="vehicle-card">
-                    <div class="vehicle-img-wrapper">
-                        <img src="รถ-Hatch-Back.jpg" alt="รับจำนำรถยนต์ทุกประเภท">
-                    </div>
-                    <div class="vehicle-card-content">
-                        <h3>🚗 รถยนต์ทุกประเภท</h3>
-                        <ul class="vehicle-list">
-                            <li>รถเก๋ง, กระบะ, SUV, รถตู้ ทุกยี่ห้อ</li>
-                            <li>(Toyota, Honda, Isuzu, Mazda, Ford ฯลฯ)</li>
-                            <li>เน้นรถปี 2012 ขึ้นไป (พิจารณาพิเศษ)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="vehicle-card">
-                    <div class="vehicle-img-wrapper">
-                        <img src="จักรยานยน.jpg" alt="รับจำนำมอเตอร์ไซค์ทุกยี่ห้อ">
-                    </div>
-                    <div class="vehicle-card-content">
-                        <h3>🏍️ รถจักรยานยนต์ทุกยี่ห้อ</h3>
-                        <ul class="vehicle-list">
-                            <li>Honda, Yamaha, Suzuki, Kawasaki</li>
-                            <li>BigBike ทุกรุ่น ทุก CC</li>
-                            <li>รถตลาดทั่วไป สภาพดี ขับขี่ได้ปกติ</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="conditions-banner">
-                <h3>✅ เงื่อนไขการรับรถที่เปิดกว้าง</h3>
-                <div class="conditions-tags">
-                    <span class="condition-tag">รับรถค้างค่างวด (ยอดเหลือไม่สูงมาก)</span>
-                    <span class="condition-tag">รับรถติดไฟแนนซ์</span>
-                    <span class="condition-tag">ผู้จำนำต้องเป็นเจ้าของรถ หรือผู้เช่าซื้อโดยตรง</span>
-                </div>
-            </div>
-
+    <section class="section-padding">
+        <div class="container text-center">
+            <h2>รถแบบไหนที่เรายินดีรับ?</h2>
+            <p style="margin-bottom: 30px;">เราเปิดกว้างเพื่อช่วยให้คุณมีสภาพคล่องทางการเงิน</p>
+            <ul style="list-style: none; display: inline-block; text-align: left;">
+                <li>🚗 รถยนต์ทุกยี่ห้อ (Toyota, Honda, Isuzu, Mazda ฯลฯ)</li>
+                <li>✅ รถเก๋ง, กระบะ, SUV, รถตู้</li>
+                <li>✅ รถค้างค่างวด ติดไฟแนนซ์ (ยอดเหลือไม่สูงมาก)</li>
+                <li>✅ รถปี 2012 ขึ้นไป รับพิจารณาเป็นพิเศษ</li>
+            </ul>
         </div>
     </section>
+
     <section class="section-padding" style="background: white;">
         <div class="container" style="max-width: 700px;">
-            <h2 class="text-center" style="margin-bottom: 30px; font-weight: bold; font-size: 1.8rem;">เอกสารที่ต้องเตรียม สำหรับการจำนำรถ</h2>
-            
+            <h2 class="text-center" style="margin-bottom: 30px; font-weight: bold; font-size: 1.8rem;">
+                เอกสารที่ต้องเตรียม สำหรับการจำนำรถ</h2>
+
             <div class="doc-black-card">
                 <div class="doc-header-row">
                     <div class="red-chevron-up"></div>
@@ -1061,7 +1032,7 @@
                     <li>สำเนาทะเบียนบ้านของเจ้าของรถ</li>
                     <li>สำเนาสมุดคู่มือจดทะเบียนรถ</li>
                     <li>สัญญาเช่าซื้อรถตัวจริง</li>
-                    <li>สัญญาเช่าซื้อรถตัวจริง</li> 
+                    <li>สัญญาเช่าซื้อรถตัวจริง</li>
                 </ul>
             </div>
         </div>
@@ -1070,40 +1041,63 @@
     <section class="contact-red-section text-center">
         <div class="container">
             <h2 class="contact-title">ติดต่อสอบถาม 24 ชั่วโมง</h2>
-            
+
             <div class="contact-box-glass">
                 <div class="contact-detail-row">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                        </svg>
                     </div>
                     <span><strong>ชื่อกิจการ:</strong> ดาวรุ่งจอดจำนำรถ</span>
                 </div>
-                
+
                 <div class="contact-detail-row">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+                        </svg>
                     </div>
                     <span><strong>ที่ตั้ง:</strong> สาขาพัทยา จ.ชลบุรี</span>
                 </div>
 
                 <div class="contact-detail-row">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z" />
+                        </svg>
                     </div>
                     <span><strong>เวลาทำการ:</strong> เปิดบริการทุกวัน 09.00 – 20.00 น.</span>
                 </div>
 
                 <div class="contact-detail-row">
                     <div class="contact-icon">
-                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H9v-2h6v2zm-3-7c-1.38 0-2.5-1.12-2.5-2.5S10.62 6 12 6s2.5 1.12 2.5 2.5S13.38 11 12 11z"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H9v-2h6v2zm-3-7c-1.38 0-2.5-1.12-2.5-2.5S10.62 6 12 6s2.5 1.12 2.5 2.5S13.38 11 12 11z" />
+                        </svg>
                     </div>
                     <span><strong>Line ID:</strong> 0613809124</span>
+                </div>
+
+                <div class="contact-detail-row">
+                    <div class="contact-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"
+                                fill="#1877F2" />
+                        </svg>
+                    </div>
+                    <span><strong>Facebook:</strong> <a
+                            href="https://www.facebook.com/share/17t2thZpSu/?mibextid=wwXIfr"
+                            style="color: white; text-decoration: none;" target="_blank">ดาวรุ่งจอดจำนำรถ</a></span>
                 </div>
             </div>
 
             <div class="cta-group">
-                <a href="tel:0933052209" class="btn btn-call">📞 โทร: 093-305-2209</a>
-                <a href="https://line.me/ti/p/7rTPABLJ9s" class="btn btn-line">🟢 ทักไลน์ปรึกษาฟรี</a>
+                <a href="thank-you.html" class="btn btn-contact-main">📱 ช่องทางการติดต่อ</a>
             </div>
         </div>
     </section>
@@ -1111,18 +1105,21 @@
     <footer>
         <div class="container text-center">
             <p>Copyright &copy; 2026 - ดาวรุ่งจอดจำนำรถ | ให้บริการจำนำรถยนต์-จำนำรถจอดอย่างมืออาชีพ</p>
-            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">บริการเงินด่วนทันใจ ปลอดภัย ถูกต้องตามกฎหมาย</p>
+            <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.6;">บริการเงินด่วนทันใจ ปลอดภัย ถูกต้องตามกฎหมาย
+            </p>
         </div>
     </footer>
 
     <div class="floating-contact-container">
-        <div class="contact-tooltip">ติดต่อเรา</div>
-        <a href="https://line.me/ti/p/7rTPABLJ9s" class="floating-btn-red">
+        <div class="contact-tooltip">ช่องทางการติดต่อ</div>
+        <a href="thank-you.html" class="floating-btn-red">
             <svg class="chat-icon-svg" viewBox="0 0 24 24">
-                <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                <path
+                    d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z" />
             </svg>
         </a>
     </div>
 
 </body>
+
 </html>
