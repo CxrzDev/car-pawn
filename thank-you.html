@@ -5,6 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ขอบคุณที่ติดต่อ | ดาวรุ่งจอดจำนำรถ</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GN24C4F7P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-0GN24C4F7P');
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -12,6 +21,7 @@
             --secondary-color: #1d3557;
             --accent-color: #06c755;
             --fb-color: #1877F2;
+            --phone-color: #ff6b35;
             --text-dark: #333;
             --light-bg: #f8f9fa;
         }
@@ -115,6 +125,11 @@
             color: white;
         }
 
+        .btn-phone {
+            background-color: var(--phone-color);
+            color: white;
+        }
+
         .btn-back {
             background-color: transparent;
             color: var(--secondary-color);
@@ -132,6 +147,10 @@
 
         .btn-facebook:hover {
             background-color: #166fe5;
+        }
+
+        .btn-phone:hover {
+            background-color: #e84e1f;
         }
 
         .btn-back:hover {
@@ -192,6 +211,13 @@
                         d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.308c0-3.007 1.791-4.668 4.533-4.668 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.215h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
                 ติดตามทาง Facebook
+            </a>
+            <a href="tel:093-305-2209" class="btn btn-phone">
+                <svg class="icon-svg" viewBox="0 0 24 24">
+                    <path
+                        d="M22.8 0H1.2C0.5372 0 0 0.5372 0 1.2V22.8C0 23.4628 0.5372 24 1.2 24H22.8C23.4628 24 24 23.4628 24 22.8V1.2C24 0.5372 23.4628 0 22.8 0ZM15.6627 20.1H8.3373V3.9H15.6627V20.1ZM19.5 19.29C17.4168 20.556 12 21.3279 12 21.3279C12 21.3279 6.5832 20.556 4.5 19.29V4.71C6.5832 3.444 12 2.6721 12 2.6721C12 2.6721 17.4168 3.444 19.5 4.71V19.29Z" />
+                </svg>
+                โทร: 093-305-2209
             </a>
         </div>
 
